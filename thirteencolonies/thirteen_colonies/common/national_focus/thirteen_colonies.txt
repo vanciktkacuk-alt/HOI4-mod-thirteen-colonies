@@ -1,0 +1,319 @@
+focus_tree = {
+	id = thirteen_colonies_tree
+	country = {
+		factor = 0
+		modifier = { add = 1000 tag = USA }
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = 1000 }
+
+	focus = {
+		id = THC_charter
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 0
+		cost = 5
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = THC_assembly
+		icon = GFX_goal_generic_demand_territory
+		x = 3
+		y = 1
+		cost = 7
+		prerequisite = { focus = THC_charter }
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = THC_union_act
+		icon = GFX_goal_generic_national_unity
+		x = 3
+		y = 2
+		cost = 10
+		prerequisite = { focus = THC_assembly }
+		completion_reward = {
+			add_ideas = THC_colonial_assembly
+		}
+	}
+	focus = {
+		id = THC_crown_loyalty
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = THC_union_act }
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = THC_dominion_status
+		icon = GFX_goal_generic_trade
+		x = 3
+		y = 3
+		cost = 10
+		prerequisite = { focus = THC_union_act }
+		completion_reward = {
+			add_ideas = THC_dominion_privileges
+		}
+	}
+	focus = {
+		id = THC_ports
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 6
+		y = 1
+		cost = 10
+		prerequisite = { focus = THC_charter }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = { is_coastal = yes }
+				add_building_construction = { type = dockyard level = 2 instant_build = yes }
+			}
+		}
+	}
+	focus = {
+		id = THC_southern_reforms
+		icon = GFX_goal_generic_production
+		x = 5
+		y = 2
+		cost = 10
+		prerequisite = { focus = THC_ports }
+		completion_reward = {
+			random_owned_controlled_state = { add_building_construction = { type = industrial_complex level = 1 instant_build = yes } }
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = THC_northern_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 7
+		y = 2
+		cost = 10
+		prerequisite = { focus = THC_ports }
+		completion_reward = {
+			random_owned_controlled_state = { add_building_construction = { type = industrial_complex level = 2 instant_build = yes } }
+		}
+	}
+	focus = {
+		id = THC_trade_compact
+		icon = GFX_goal_generic_trade
+		x = 7
+		y = 3
+		cost = 10
+		prerequisite = { focus = THC_southern_reforms }
+		prerequisite = { focus = THC_northern_industry }
+		completion_reward = {
+			add_ideas = THC_atlantic_trade
+		}
+	}
+	focus = {
+		id = THC_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 7
+		y = 4
+		cost = 12
+		prerequisite = { focus = THC_trade_compact }
+		completion_reward = {
+			random_owned_controlled_state = { add_building_construction = { type = arms_factory level = 2 instant_build = yes } }
+		}
+	}
+	focus = {
+		id = THC_militia
+		icon = GFX_goal_generic_army_doctrines
+		x = 9
+		y = 1
+		cost = 10
+		prerequisite = { focus = THC_charter }
+		completion_reward = {
+			add_war_support = 0.1
+			add_manpower = 50000
+		}
+	}
+	focus = {
+		id = THC_ranger_corps
+		icon = GFX_goal_generic_army_doctrines
+		x = 9
+		y = 2
+		cost = 10
+		prerequisite = { focus = THC_militia }
+		completion_reward = {
+			add_ideas = THC_militia_tradition
+		}
+	}
+	focus = {
+		id = THC_colonial_regiments
+		icon = GFX_goal_generic_army_doctrines
+		x = 11
+		y = 2
+		cost = 10
+		prerequisite = { focus = THC_militia }
+		completion_reward = {
+			army_experience = 25
+			add_manpower = 75000
+		}
+	}
+	focus = {
+		id = THC_atlantic_fleet
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 10
+		y = 3
+		cost = 12
+		prerequisite = { focus = THC_ranger_corps }
+		prerequisite = { focus = THC_colonial_regiments }
+		completion_reward = {
+			navy_experience = 25
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = THC_west
+		icon = GFX_goal_generic_occupy_states_ongoing
+		x = 13
+		y = 1
+		cost = 10
+		prerequisite = { focus = THC_charter }
+		completion_reward = {
+			add_state_claim = 369
+			add_state_claim = 368
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = THC_ohio_country
+		icon = GFX_goal_generic_demand_territory
+		x = 13
+		y = 2
+		cost = 12
+		prerequisite = { focus = THC_west }
+		completion_reward = {
+			add_state_claim = 261
+			add_state_claim = 396
+			add_state_claim = 395
+			add_state_claim = 393
+			add_state_claim = 394
+		}
+	}
+	focus = {
+		id = THC_gulf_coast
+		icon = GFX_goal_generic_demand_territory
+		x = 15
+		y = 2
+		cost = 12
+		prerequisite = { focus = THC_west }
+		completion_reward = {
+			add_state_claim = 366
+			add_state_claim = 367
+			add_state_claim = 370
+			add_state_claim = 371
+		}
+	}
+	focus = {
+		id = THC_continental_vision
+		icon = GFX_goal_generic_occupy_states_ongoing
+		x = 14
+		y = 3
+		cost = 15
+		prerequisite = { focus = THC_ohio_country }
+		prerequisite = { focus = THC_gulf_coast }
+		completion_reward = {
+			add_ideas = THC_frontier_spirit
+			add_state_claim = 372
+			add_state_claim = 373
+			add_state_claim = 391
+			add_state_claim = 392
+		}
+	}
+	focus = {
+		id = THC_jewel
+		icon = GFX_goal_generic_national_unity
+		x = 8
+		y = 6
+		cost = 20
+		prerequisite = { focus = THC_dominion_status }
+		prerequisite = { focus = THC_arsenal }
+		prerequisite = { focus = THC_atlantic_fleet }
+		prerequisite = { focus = THC_continental_vision }
+		completion_reward = {
+			add_ideas = THC_jewel_of_the_empire
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = THC_grievances
+		icon = GFX_goal_generic_political_pressure
+		x = 5
+		y = 3
+		cost = 8
+		prerequisite = { focus = THC_union_act }
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.03
+		}
+	}
+	focus = {
+		id = THC_continental_congress
+		icon = GFX_goal_generic_national_unity
+		x = 5
+		y = 4
+		cost = 10
+		prerequisite = { focus = THC_grievances }
+		completion_reward = {
+			add_political_power = 75
+			add_ideas = THC_frontier_spirit
+		}
+	}
+	focus = {
+		id = THC_declaration_of_rights
+		icon = GFX_goal_generic_demand_territory
+		x = 5
+		y = 5
+		cost = 12
+		prerequisite = { focus = THC_continental_congress }
+		prerequisite = { focus = THC_ranger_corps }
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = THC_home_rule
+		icon = GFX_goal_generic_political_pressure
+		x = 3
+		y = 4
+		cost = 10
+		prerequisite = { focus = THC_dominion_status }
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+			set_country_flag = thc_home_rule_done
+		}
+	}
+	focus = {
+		id = THC_independence
+		icon = GFX_goal_generic_demand_territory
+		x = 4
+		y = 6
+		cost = 15
+		prerequisite = { focus = THC_declaration_of_rights }
+		prerequisite = { focus = THC_home_rule }
+		completion_reward = {
+			ENG = {
+				set_autonomy = {
+					target = USA
+					autonomy_state = autonomy_free
+				}
+			}
+			add_political_power = 150
+			add_war_support = 0.05
+		}
+	}
+}

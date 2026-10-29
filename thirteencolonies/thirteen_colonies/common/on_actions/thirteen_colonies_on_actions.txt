@@ -1,0 +1,22 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = { NOT = { has_global_flag = thc_started } }
+				USA = { thc_setup = yes }
+			}
+		}
+	}
+	on_daily = {
+		effect = {
+			if = {
+				limit = { USA = { has_country_flag = thc_home_rule_done } }
+				USA = { add_autonomy_ratio = { value = 0.1 localization = THC_home_rule_boost } }
+			}
+			if = {
+				limit = { NOT = { has_global_flag = thc_started } }
+				USA = { thc_setup = yes }
+			}
+		}
+	}
+}

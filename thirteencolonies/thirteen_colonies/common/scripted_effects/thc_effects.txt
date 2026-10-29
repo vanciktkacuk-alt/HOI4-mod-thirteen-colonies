@@ -1,0 +1,189 @@
+thc_setup_borders = {
+	CAN = {
+		transfer_state = 261
+		transfer_state = 393
+		transfer_state = 394
+		transfer_state = 395
+		transfer_state = 396
+		transfer_state = 391
+		transfer_state = 392
+		transfer_state = 389
+		transfer_state = 390
+		transfer_state = 388
+		transfer_state = 385
+		transfer_state = 386
+		transfer_state = 387
+		transfer_state = 463
+	}
+	ENG = {
+		transfer_state = 366
+		transfer_state = 367
+		transfer_state = 368
+		transfer_state = 369
+		transfer_state = 370
+	}
+	MEX = {
+		transfer_state = 371
+		transfer_state = 372
+		transfer_state = 373
+		transfer_state = 374
+		transfer_state = 375
+		transfer_state = 376
+		transfer_state = 377
+		transfer_state = 378
+		transfer_state = 379
+		transfer_state = 380
+		transfer_state = 381
+		transfer_state = 382
+		transfer_state = 383
+		transfer_state = 384
+	}
+	261 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	393 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	394 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	395 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	396 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	391 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	392 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	389 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	390 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	388 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	385 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	386 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	387 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	463 = {
+		remove_core_of = USA
+		add_core_of = CAN
+	}
+	366 = {
+		remove_core_of = USA
+		add_core_of = ENG
+	}
+	367 = {
+		remove_core_of = USA
+		add_core_of = ENG
+	}
+	368 = {
+		remove_core_of = USA
+		add_core_of = ENG
+	}
+	369 = {
+		remove_core_of = USA
+		add_core_of = ENG
+	}
+	370 = {
+		remove_core_of = USA
+		add_core_of = ENG
+	}
+	371 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	372 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	373 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	374 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	375 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	376 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	377 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	378 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	379 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	380 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	381 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	382 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	383 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+	384 = {
+		remove_core_of = USA
+		add_core_of = MEX
+	}
+}
+
+thc_setup = {
+	set_global_flag = thc_started
+	ENG = {
+		set_autonomy = {
+			target = USA
+			autonomy_state = autonomy_dominion
+		}
+	}
+	USA = {
+		set_cosmetic_tag = THC_DOMINION
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	thc_setup_borders = yes
+}

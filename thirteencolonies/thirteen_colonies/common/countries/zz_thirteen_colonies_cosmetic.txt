@@ -1,0 +1,4 @@
+THC_DOMINION = {
+	color = { 40 70 150 }
+	color_ui = { 70 100 180 }
+}
